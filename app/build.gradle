@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.chaquo.python'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.shd.boomtruckpad"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        python {
+//            buildPython "C:\\Users\\MI\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
+            pip {
+                install "numpy"
+                install "scipy"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            python {
+                srcDirs = ["src/main/python"]
+
+            }
+        }
+    }
+
+
+}
+
+greendao {
+    schemaVersion 1 //当前数据库版本
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.WhatWeCan:TCPClient:v1.0.2'
+    implementation 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    //implementation 'com.github.licheedev.Android-SerialPort-API:serialport:1.0.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'cn.com.superLei:aop-arms:1.0.4'
+    implementation 'cn.com.superLei:blelibrary:3.2.0'
+    implementation 'com.blankj:utilcode:1.28.0'
+
+
+}

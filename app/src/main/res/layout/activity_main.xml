@@ -1,0 +1,1564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--表头布局 云台 支腿 运动臂之内-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_button_blue_bg"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/rg_top"
+            android:layout_width="450dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_main_yun_tab"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_radiobutton_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="云台"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+            <RadioButton
+                android:id="@+id/rb_support_legs"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_radiobutton_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="支腿"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/rb_sport_arm"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_radiobutton_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="运动臂"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/rb_fault"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/top_radiobutton_bg"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="故障"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+        </RadioGroup>
+
+    </LinearLayout>
+    <!--布局为操作区，电压等表头信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_violet"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_option_title1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@color/color_option_bg"
+            android:gravity="center"
+            android:text="操作区"
+            android:textColor="@color/color_white"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="状态"
+            android:textColor="@color/color_text_gray"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="发动机转速："
+            android:textColor="@color/color_text_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_motor_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="800rmp"
+            android:textColor="@color/color_text_green"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="压力："
+            android:textColor="@color/color_text_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="48Kpa"
+            android:textColor="@color/color_text_green"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="底盘电压："
+            android:textColor="@color/color_text_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_bottom_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27.6V 100%"
+            android:textColor="@color/color_text_green"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="平台电压："
+            android:textColor="@color/color_text_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_platform_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27.6V 100%"
+            android:textColor="@color/color_text_green"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="长角电压："
+            android:textColor="@color/color_text_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_long_angle_voltage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27.6V 100%"
+            android:textColor="@color/color_text_green"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="时间："
+            android:textColor="@color/color_text_gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_run_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="70h"
+            android:textColor="@color/color_text_green"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_option_title2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:background="@color/color_option_bg"
+            android:gravity="center"
+            android:text="操作区"
+            android:textColor="@color/color_white"
+            android:textSize="15dp"></TextView>
+    </LinearLayout>
+    <!--布局为上车按钮的布局-->
+    <LinearLayout
+        android:id="@+id/ll_option_car_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/rg_option_left"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_option_bg"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_turntable"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="转台顺/逆"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_bottom_arm"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="下臂升/降"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+            <Button
+                android:id="@+id/bt_along"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="25dp"
+                android:background="@drawable/circle_bt_bg"
+                android:text="顺"
+                android:textColor="@color/color_white"
+                android:textSize="18dp"></Button>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_top_arm"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="上臂升/降"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_platform"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="平台顺/逆"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_in_arm"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="内臂伸/缩"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary">
+                <RadioGroup
+                    android:id="@+id/chooseType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+                    <RadioButton
+                        android:id="@+id/speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="速度控制"
+                        android:textSize="16dp"
+                        android:textColor="@color/color_white"/>
+                    <RadioButton
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="位置控制"
+                        android:textSize="16dp"
+
+                        android:textColor="@color/color_white"/>
+                </RadioGroup>
+                <TextView
+                    android:id="@+id/tv_input_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="55dp"
+                    android:background="@drawable/radiobutton_bottom_bg_checked"
+
+                    android:gravity="center"
+                    android:text="输入数值"
+                    android:textColor="@color/color_white"
+                    android:textSize="16dp"></TextView>
+                <TextView
+                    android:id="@+id/tv_down_arm_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="165dp"
+                    android:layout_marginTop="330dp"
+                    android:text="86.4°"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_turntable_angle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="330dp"
+                    android:layout_marginTop="370dp"
+                    android:text="213.4°"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_up_arm_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="245dp"
+                    android:text="3.1°"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_platform_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="475dp"
+                    android:layout_marginTop="195dp"
+                    android:text="5.7°"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_telescopic_boom_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="152dp"
+                    android:text="3579mm"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_hopper_x_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="475dp"
+                    android:layout_marginTop="225dp"
+                    android:text="X:3.5°"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_hopper_y_angle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="475dp"
+                    android:layout_marginTop="245dp"
+                    android:text="Y:3.5°"
+                    android:textColor="@color/color_text_green"
+                    android:textSize="16dp" />
+                <ImageView
+                    android:layout_width="450dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="80dp"
+                    android:src="@mipmap/icon_car"></ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="95dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人斗旋转："
+                            android:textColor="#c3c3c3"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/tv_people_hopper_angle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0°"
+                            android:textColor="@color/color_text_green"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人斗升降："
+                            android:textColor="#c3c3c3"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/tv_people_hopper_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2262mm°"
+                            android:textColor="@color/color_text_green"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="机器斗旋转："
+                            android:textColor="#c3c3c3"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/tv_machine_hopper_angle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0°"
+                            android:textColor="@color/color_text_green"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="机器斗升降："
+                            android:textColor="#c3c3c3"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/tv_machine_hopper_height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="188mm"
+                            android:textColor="@color/color_text_green"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="400dp"
+                    android:layout_height="250dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/car_looking_down_border">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:text="俯视"
+                        android:textColor="@color/color_white"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="30dp"
+                        android:src="@mipmap/icon_look_down_bg" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="290dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@mipmap/icon_dot" />
+
+                    <TextView
+                        android:id="@+id/tv_turntable_angle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="320dp"
+                        android:layout_marginTop="90dp"
+                        android:text="60°"
+                        android:textColor="@color/color_yellow"
+                        android:textSize="20dp" />
+
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="400dp"
+                    android:layout_height="320dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/car_looking_down_border">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人斗位置操控辅助计算"
+                            android:textColor="@color/color_white"
+                            android:textSize="16dp" />
+                        <ImageView
+                            android:id="@+id/btImageM"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+
+                            android:src="@mipmap/booth_tooth1"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="目标点"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="实时点"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="X"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/mb_yt_x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="0.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/sj_yt_x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="1.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Y"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/mb_yt_y"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="0.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/sj_yt_y"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="2.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Z"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/mb_yt_z"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="0.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/sj_yt_z"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="3.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:text="R"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/mb_yt_r"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:text="0.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                            <TextView
+                                android:id="@+id/sj_yt_r"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:text="0.0"
+                                android:textColor="@color/color_white"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barchar"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="146dp"
+                        android:layout_width="360dp"
+                        android:layout_height="300dp">
+
+                    </com.github.mikephil.charting.charts.BarChart>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_option_right"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_option_bg"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_leveling"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="调平升/降"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"
+                android:visibility="gone"
+                ></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"
+                android:visibility="gone"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_machine_hopper"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="机器斗旋转"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_people_hopper"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="人斗旋转"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <Button
+                android:id="@+id/bt_inverse"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="25dp"
+                android:background="@drawable/circle_bt_bg"
+                android:text="逆"
+                android:textColor="@color/color_white"
+                android:textSize="18dp"></Button>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_machine_hopper_updown"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="机器斗升/降"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_people_hopper_updown"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="人斗升/降"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+        </RadioGroup>
+    </LinearLayout>
+    <!--点击下车后的布局-->
+    <RelativeLayout
+        android:id="@+id/rg_option_car_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_car_leg"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_car_leg" />
+
+        <TextView
+            android:id="@+id/tv_down_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="X:3.1°"
+            android:textColor="@color/color_text_green"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_down_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_down_x"
+            android:layout_centerInParent="true"
+            android:text="Y:5.1°"
+            android:textColor="@color/color_text_green"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_left_front_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_car_leg"
+            android:layout_marginLeft="580dp"
+            android:layout_marginBottom="-35dp"
+            android:src="@mipmap/icon_y_arrow_in_in_place"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_right_front_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_car_leg"
+            android:layout_marginLeft="735dp"
+            android:layout_marginBottom="-35dp"
+            android:src="@mipmap/icon_y_arrow_in_in_place"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_left_behind_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_car_leg"
+            android:layout_marginLeft="580dp"
+            android:layout_marginTop="-15dp"
+            android:src="@mipmap/icon_y_arrow_in_in_place"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_right_behind_v"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_car_leg"
+            android:layout_marginLeft="735dp"
+            android:layout_marginTop="-15dp"
+            android:src="@mipmap/icon_y_arrow_in_in_place"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/iv_left_front_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/iv_car_leg"
+            android:src="@mipmap/icon_x_right_arrow_green" />
+
+        <ImageView
+            android:id="@+id/iv_right_front_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="260dp"
+            android:layout_toRightOf="@+id/iv_car_leg"
+            android:src="@mipmap/icon_x_left_arrow_green"></ImageView>
+
+
+        <ImageView
+            android:id="@+id/iv_left_behind_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/iv_car_leg"
+            android:src="@mipmap/icon_x_right_arrow_green"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_right_behind_h"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="330dp"
+            android:layout_toRightOf="@+id/iv_car_leg"
+            android:src="@mipmap/icon_x_left_arrow_green"></ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_car_leg"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_auto_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/radiobutton_bottom_bg_yellow_checked"
+
+                android:gravity="center"
+                android:text="自动伸出"
+                android:textColor="@color/color_white"
+                android:textSize="16dp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_auto_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/radiobutton_bottom_bg_checked"
+
+                android:gravity="center"
+                android:text="自动缩回"
+                android:textColor="@color/color_white"
+                android:textSize="16dp"></TextView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <!--点击故障按钮后的布局-->
+    <LinearLayout
+        android:id="@+id/ll_option_fault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone">
+        <RadioGroup
+            android:id="@+id/rg_option_fault"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_option_bg"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_new"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="最新"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_all"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="所有"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#cbcbcb">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="序号"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_item_33"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="故障"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_item_33"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="故障时间"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_item_33"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fault_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+    <!--点击云台按钮后的布局-->
+    <LinearLayout
+        android:id="@+id/ll_option_yun_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/rg_option_yun_left"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_option_bg"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_yun_tab"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="云台顺/逆"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+            <Button
+                android:id="@+id/bt_yun_along"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="200dp"
+                android:background="@drawable/circle_bt_bg"
+                android:text="顺"
+                android:textColor="@color/color_white"
+                android:textSize="18dp"></Button>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary">
+                <com.shd.boomtruckpad.view.PlayWindowContainer
+                    android:layout_width="620dp"
+                    android:layout_height="500dp"
+                    android:id="@+id/frame_layout"
+                    android:background="@android:color/black">
+
+                    <TextureView
+                        android:id="@+id/texture_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </com.shd.boomtruckpad.view.PlayWindowContainer>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="290dp"
+                    android:layout_marginTop="230dp"
+                    android:src="@mipmap/ju_01"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_option_yun_ct"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="650dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/option_radiobutton_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="粗调"
+                    android:textColor="@color/color_white"
+                    android:textSize="13dp"></RadioButton>
+                <RadioButton
+                    android:id="@+id/rb_option_yun_wt"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="700dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/option_radiobutton_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="微调"
+                    android:textColor="@color/color_white"
+                    android:textSize="13dp"></RadioButton>
+                <TextView
+                    android:id="@+id/yt_input_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="650dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/radiobutton_bottom_bg_checked"
+
+                    android:gravity="center"
+                    android:text="输入数值"
+                    android:textColor="@color/color_white"
+                    android:textSize="16dp"></TextView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="650dp"
+                    android:layout_marginTop="120dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="云台实时数据"
+                            android:textColor="#c3c3c3"
+                            android:textSize="16dp" />
+                        <ImageView
+                            android:id="@+id/btImage"
+                            android:layout_width="20dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/booth_tooth1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="水平旋转："
+                            android:textColor="#c3c3c3"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/yt_horizontal_circle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0°"
+                            android:textColor="@color/color_text_green"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="垂直旋转："
+                            android:textColor="#c3c3c3"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/yt_vertical_circle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0°"
+                            android:textColor="@color/color_text_green"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="激光测距："
+                            android:textColor="#c3c3c3"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/yt_laser_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/color_text_green"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <RadioButton
+                    android:id="@+id/init_data_state"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="650dp"
+                    android:layout_marginTop="310dp"
+                    android:background="@drawable/option_radiobutton_bg"
+                    android:textColor="@color/color_white"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:text="开始测量"/>
+                <RadioButton
+                    android:id="@+id/get_init_data"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="650dp"
+                    android:layout_marginTop="370dp"
+                    android:background="@drawable/option_radiobutton_bg"
+                    android:textColor="@color/color_white"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:text="获取初始数据"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="500dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="目标点计算"
+                            android:textColor="@color/color_white"
+                            android:textSize="20dp" />
+                        <Button
+                            android:id="@+id/yt_count_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="计算坐标"
+                            android:textColor="@color/color_white"
+                            android:background="@color/color_button_blue_bg"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="X:"
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:id="@+id/yt_count_X"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:text="Y:"
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:id="@+id/yt_count_Y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:text="Z:"
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:id="@+id/yt_count_Z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:text="R:"
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                        <TextView
+                            android:id="@+id/yt_count_R"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text=""
+                            android:textColor="@color/color_white"
+                            android:textSize="26dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_option_yun_right"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_option_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_leveling1"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="调平升/降"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"
+                android:visibility="gone"
+                ></RadioButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_option_divide"
+                android:visibility="gone"></View>
+
+            <RadioButton
+                android:id="@+id/rb_option_yun_fy"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@drawable/option_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="云台俯/仰"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+
+            <Button
+                android:id="@+id/bt_yun_inverse"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="200dp"
+                android:background="@drawable/circle_bt_bg"
+                android:text="逆"
+                android:textColor="@color/color_white"
+                android:textSize="18dp"></Button>
+
+
+        </RadioGroup>
+    </LinearLayout>
+    <!--布局为急停按钮 还有 下车 上车 故障-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#292b32">
+        <ImageView
+            android:id="@+id/iv_stop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_stop_stop"
+            android:layout_marginLeft="70dp">
+
+        </ImageView>
+
+        <RadioGroup
+            android:id="@+id/rg_bottom"
+            android:layout_width="450dp"
+            android:layout_marginTop="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_bottom_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="下车"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/rb_bottom_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bottom_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="上车"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/rb_yun_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bottom_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="测量"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/rb_bottom_fault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/bottom_radiobutton_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="故障"
+                android:textColor="@color/color_white"
+                android:textSize="20dp"></RadioButton>
+        </RadioGroup>
+    </RelativeLayout>
+</LinearLayout>

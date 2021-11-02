@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/ll_main">
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="序号"
+        android:textColor="@color/text_item_33"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_fault"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="故障"
+        android:textColor="@color/text_item_33"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_fault_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="故障时间"
+        android:textColor="@color/text_item_33"
+        android:textSize="16sp" />
+</LinearLayout>
